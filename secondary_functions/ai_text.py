@@ -1,8 +1,7 @@
 from openai import OpenAI
-import logging
+import config
 
-
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=config.OPENAI_TOKEN)
 
 
 def generate_openai_tekst(vopros: str):

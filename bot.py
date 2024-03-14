@@ -1,6 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 
+import config
 from handlers import (
     obmenka,
     menu,
@@ -17,7 +18,7 @@ from handlers import (
 
 
 async def main():
-    bot = Bot(token="6239139377:AAG9MphHAmTK83tWqMdtqh8qO6ujKiafjVw")
+    bot = Bot(token=config.TELEGRAM_TOKEN)
     dp = Dispatcher()
 
     dp.include_router(start.router)
